@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Russian Homework Selector</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        text-align: center;
+        background-color: aliceblue;
+    }
+
+    select {
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .student-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .student-bubble {
+        padding: 10px 15px;
+        background-color: #87ceeb;
+        border-radius: 25px;
+        font-size: 16px;
+        color: white;
+        cursor: default;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .hidden {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 5px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    .reset-button {
+        background-color: #f44336;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Russian Homework Selector</h1>
+  <label for="section-selector">Choose a section:</label>
+  <select id="section-selector">
+    <option value="section1">Section 501</option>
+    <option value="section2">Section 502</option>
+  </select>
+  <div>
+    <button id="start-button">Go</button>
+    <button id="reset-button" class="reset-button">Reset</button>
+  </div>
+  <div id="student-container" class="student-list"></div>
+  <script src="app.js"></script>
+</body>
+</html>
