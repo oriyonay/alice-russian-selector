@@ -2,7 +2,7 @@ const studentData = {
     section1: [ // section 501
         "Michael", "Abby", "Max", "Ashlyn", "Christian", 
         "Cooper", "Isaac", "Jack", "Andrew", "Niya", "Litzie", 
-        "Nathan", "Carmen", "Jacqueline", "Ian", "Keaton", 
+        "Nathan", "Carmen", "Jacqueline", "Keaton",  // no Ian
         "Christopher", "Lane", "Grace", "Destiny", "Alim", 
         "Joshua", "Luca"
     ],
