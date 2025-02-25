@@ -36,9 +36,15 @@
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .hidden {
+    /* When a student is eliminated via the elimination process */
+    .eliminated {
         opacity: 0;
         transform: scale(0);
+    }
+
+    /* When a student is marked absent via the checkbox */
+    .absent {
+        display: none;
     }
 
     button {
@@ -61,6 +67,39 @@
         background-color: #f44336;
     }
 
+    /* Styles for the student selector dropdown */
+    #student-checkboxes {
+        margin: 20px auto;
+        width: 250px;
+        text-align: left;
+    }
+
+    #toggle-checkboxes-button {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #checkbox-container {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        border-top: none;
+        padding: 10px;
+        background-color: #f9f9f9;
+        display: none;
+    }
+
+    #checkbox-container label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -70,6 +109,12 @@
     <option value="section1">Section 501</option>
     <option value="section2">Section 502</option>
   </select>
+  
+  <div id="student-checkboxes">
+    <button id="toggle-checkboxes-button">Select Students</button>
+    <div id="checkbox-container"></div>
+  </div>
+  
   <div>
     <button id="start-button">Go</button>
     <button id="reset-button" class="reset-button">Reset</button>
